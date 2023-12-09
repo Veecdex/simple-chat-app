@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  <link rel="stylesheet" href="style.css">
+    <title>simple chat app</title>
+</head>
+<body>
+
+<div  class="container-fluid main-container">
+    <div style="margin-right: 20px;" class="row">
+        <div class="col-md-4">
+            <a href="#" class="nav-link" onclick="showContent('select')">Select Contact</a>
+        </div>
+        <div class="col-md-4">
+            <a href="#" class="nav-link" onclick="showContent('create')">Create Contact</a>
+        </div>
+        <div class="col-md-4">
+            <a href="#" class="nav-link" onclick="showContent('history')">Chatting History</a>
+        </div>
+    </div>
+
+    <div class="content" id="select-content">
+        <!-- Content for 'Select Contact' goes here -->
+        <h5 style="opacity: 50%;">select contact here..</h5>
+        <div id="contact-list"></div>
+    </div>
+
+    <div class="content" id="create-content" style="display: none;">
+        <!-- Content for 'Create Contact' goes here -->
+        <h5 style="opacity: 50%;">create contact  here..</h5>
+        <form id="create-contact-form">
+            <div class="form-group">
+                <label for="contactName">Input Name:</label>
+                <input type="text" class="form-control" id="contactName" required>
+            </div>
+            <button type="button" class="btn btn-primary" onclick="saveContact()">Save</button>
+        </form>
+    </div>
+
+    <div class="content" id="history-content" style="display: none;">
+        <!-- Content for 'Chatting History' goes here -->
+        <h2>Chatting History</h2>
+        <div id="chat-history-list" class="chat-history-list"></div>
+    </div>
+</div>
+    <!-- Middle Container -->
+    <div  class="middle-container" id="middle-container">
+        <div id="chat-display" class="content"></div>
+        <button style="margin-bottom: 70px;" class="btn btn-primary clear-messages-btn" onclick="clearMessages()">Clear Messages</button>
+    
+        <div id="chat-display" class="content"></div>
+        <!-- Content for the middle container goes here -->
+       
+        <div id="middle-content" class="content"></div>
+        <button class="btn btn-primary save-chat-btn" onclick="saveChat()">Save Chat</button>
+    </div>
+
+
+<!-- Chatting Form -->
+<div id="chat-form">
+
+    <input style="border-radius: 20px;" type="text"  id="message" placeholder="Type your message..." >
+    <label  for="file-input" id="camera-icon"><img style=" float: left; margin-top:10px; height: 30px; width: 30px;" src="camera.png" alt=""></label>
+    <input type="file" id="file-input" accept="image/*" style="display:none;" onchange="handleFileSelect(event)">
+    <button id="send-button" class="btn btn-primar" onclick="sendMessage()"><img src="send.png" alt="" style=" height: 40px; width: 50px;" ></button>
+</div>
+
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+<script src="script.js">
+
+</script>
+
+</body>
+</html>

@@ -1,0 +1,138 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: rgb(114, 26, 197);
+}
+
+.clear-messages-btn {
+position: absolute;
+bottom: 10px;
+right: 10px;
+}
+.thin-container {
+border: 1px solid #ccc;
+padding: 10px;
+margin-bottom: 10px;
+border-radius: 5px;
+cursor: pointer;
+overflow: hidden; /* Hide overflowing content */
+}
+
+.thin-container:hover {
+background-color: #f4f4f4;
+}
+
+.chat-box {
+display: flex;
+align-items: center;
+margin-bottom: 8px;
+}
+
+.chat-box img {
+width: 100px; /* Set image width */
+height: 100px; /* Set image height */
+margin-right: 8px;
+border-radius: 5px;
+}
+
+.chat-box p {
+margin: 0;
+}
+
+.main-container {
+    border-radius: 15px ;
+    background-color: rgb(229, 227, 236);
+    padding: 20px;
+    margin: 20px ;
+    margin-right: 20px;
+    height: 300px;
+    width: 93%;
+}
+
+.nav-link {
+    cursor: pointer;
+    text-decoration: none;
+    color: #333;
+}
+
+.nav-link.active {
+    border-bottom: 2px solid rgb(141, 141, 156);
+}
+
+.content {
+    max-height: 150px; /* Updated max height for scrolling */
+    overflow-y: auto;
+}
+
+.contact-container {
+    border: 1px solid #ccc;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+}
+
+#chat-form {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: white;
+    padding: 10px;
+    display: flex;
+}
+
+#message {
+    flex: 1;
+    padding: 10px;
+}
+
+#send-button {
+    padding: 10px;
+    cursor: pointer;
+}
+
+.middle-container {
+    border-radius: 15px;
+    background-color:  rgb(229, 227, 236);
+    padding: 20px;
+    margin: 20px ; /* Added margin-top to create space between the middle container and the links */
+    text-align: left;
+    height: 250px; /* Adjusted height */
+    position: relative;
+    margin-bottom: 10px;
+    width: 93%;
+    margin-left: 20px;
+}
+
+.thin-container {
+    border: 1px solid #ccc;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.thin-container:hover {
+    background-color: #f4f4f4;
+}
+
+.thin-container .delete-icon {
+    float: right;
+    cursor: pointer;
+}
+
+.chat-history-list {
+    max-height: 150px;
+    overflow-y: auto;
+}
+
+
+#chat-display .thin-container:hover {
+background-color: #2980b9; /* Set hover background color to a darker shade of blue */
+}
+
+#chat-display .chat-box img {
+border: 2px solid #fff; /* Add a white border to images for better visibility */
+background-color: white;
+}
